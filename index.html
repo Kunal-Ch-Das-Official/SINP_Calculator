@@ -1,0 +1,680 @@
+
+<!-- 
+Content: SINP Calculator for canx Immigration, 
+Author: Kunal Chandra Das,
+Date: 30/03/2024 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snip Calculator</title>
+    <!-- CSS LINKING  -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADING TEXT  -->
+    <div class="component-heading-wrapper">
+      <h1 id="component-heading" class="component-heading">
+        Saskatchewan Immigrant Nominee Program(sinp) Calculator
+      </h1>
+      <p id="first-para" class="paragraph">
+        The Saskatchewan Immigrant Nominee Program (SINP) uses a unique
+        Expression of Interest (EOI) points grid to rank candidates in its
+        Saskatchewan Express Entry and Occupations In-Demand sub-categories. To
+        qualify, candidates are required to score a minimum of 60 points out of
+        100 in the SINP point assessment grid.
+      </p>
+      <p id="second-para" class="paragraph">
+        Points are calculated based on the information provided by the client.
+        Can X Immigration & Consulting Inc. does not hold any responsibility
+        form getting an ITA from SINP.
+      </p>
+    </div>
+
+    <!-- 1ST SECTION EADUCATION AND TRAINING START -->
+    <section id="eaducation-training" class="eaducation-training">
+      <!-- EADUCATION AND TRAINING HEADING  -->
+      <h2 class="sec-heading">Education & Training</h2>
+
+      <!-- ALL CHECKBOX WRAPPER DIV  -->
+      <div class="checkbox-wrapper" id="first-checkbox-wrapper">
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="checkbox-title">
+          <input
+            type="radio"
+            class="checkbox-round"
+            id="postgrad"
+            onclick="eaducationalPoints(1)"
+          />
+          Master's or Doctorate degree (Canadian equivalency)
+        </label>
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="checkbox-title">
+          <input
+            type="radio"
+            class="checkbox-round"
+            id="undergrad"
+            onclick="eaducationalPoints(2)"
+          />
+          Bachelor's degree OR at least a three-year degree at a university or
+          college</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="checkbox-title">
+          <input
+            type="radio"
+            class="checkbox-round"
+            id="certifiction"
+            onclick="eaducationalPoints(3)"
+          />
+          Trade certification equivalent to journeyperson status in
+          Saskatchewan</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="checkbox-title">
+          <input
+            type="radio"
+            class="checkbox-round"
+            id="diploma"
+            onclick="eaducationalPoints(4)"
+          />
+          Canadian equivalency diploma that requires two (but less than three)
+          years at a university,college, trade or technical school, or other
+          post-secondary institution</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="checkbox-title">
+          <input
+            type="radio"
+            class="checkbox-round"
+            id="secondery"
+            onclick="eaducationalPoints(5)"
+          />
+          Canadian equivalency certificate or at least two semesters (but less
+          than a two-year program) at a university, college, trade or technical
+          school, or other post-secondary institution</label
+        >
+      </div>
+
+      <!-- POINT CALCULATION SECTION WRAPPER -->
+      <div class="point-wrapper">
+        <!-- INPUT WITH LABEL  -->
+        <label class="point-count-heading"
+          >Points
+          <input
+            type="text"
+            name="point"
+            class="point-input"
+            id="eaducationAndTraingOutput"
+            readonly
+          />
+        </label>
+      </div>
+    </section>
+    <!-- 1ST SECTION EADUCATION AND TRAINING END-->
+
+    <!-- 2ND SECTION WORK EXPERIENCE START -->
+    <section id="work-experence" class="work-experence">
+      <h2 class="sec-heading">Work Experience</h2>
+
+      <!-- ALL CHECKBOX WRAPPER DIV  -->
+      <div class="checkbox-headings">
+        a) Skilled Work experience in the 5 years prior to application
+        submission date.
+      </div>
+      <div class="second-checkbox-wrapper" id="second-one-checkbox-wrapper">
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="bellow-5-years"
+            id="checkbox-2.1"
+            onclick="handleWorkExperiences(1)"
+          />
+          5 Years</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="bellow-5-years"
+            id="checkbox-2.2"
+            onclick="handleWorkExperiences(2)"
+          />
+          4 Years</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="bellow-5-years"
+            id="checkbox-2.3"
+            onclick="handleWorkExperiences(3)"
+          />
+          3 Years</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="bellow-5-years"
+            id="checkbox-2.4"
+            onclick="handleWorkExperiences(4)"
+          />
+          2 Years</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="bellow-5-years"
+            id="checkbox-2.5"
+            onclick="handleWorkExperiences(5)"
+          />
+          1 Years</label
+        >
+      </div>
+
+      <div class="checkbox-headings">
+        b) Skilled Work experience the 6-10 years prior to application
+        submission date
+      </div>
+      <div class="second-checkbox-wrapper" id="second-two-checkbox-wrapper">
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="above-5-years"
+            id="checkbox-2.6"
+            onclick="handleWorkExperiences(6)"
+          />
+          5 Years</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="above-5-years"
+            id="checkbox-2.7"
+            onclick="handleWorkExperiences(7)"
+          />
+          4 Years</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="above-5-years"
+            id="checkbox-2.8"
+            onclick="handleWorkExperiences(8)"
+          />
+          3 Years</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="above-5-years"
+            id="checkbox-2.9"
+            onclick="handleWorkExperiences(9)"
+          />
+          2 Years</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="above-5-years"
+            id="checkbox-2.10"
+            onclick="handleWorkExperiences(10)"
+          />
+          Less than 1 Year</label
+        >
+      </div>
+
+      <!-- POINT CALCULATION SECTION WRAPPER -->
+      <div class="point-wrapper-hide">
+        <!-- INPUT WITH LABEL  -->
+        <label class="point-count-heading"
+          >Points
+          <input
+            type="text"
+            name="point"
+            class="point-input"
+            id="workExperiencePointsOutput"
+            readonly
+          />
+        </label>
+      </div>
+      <!-- INPUT FEALDS AS A VARIABLE -->
+      <input
+        type="text"
+        name="point"
+        class="point-input"
+        id="workExperiencePointsOutput2"
+      />
+      <input
+        type="text"
+        name="point"
+        class="point-input"
+        id="workExperiencePointsOutput3"
+      />
+    </section>
+    <!-- 2ND SECTION WORK EXPERIENCE ENDS  -->
+
+    <!-- 3RD SECTION LANGUAGE START  -->
+    <section id="language" class="language">
+      <h2 class="sec-heading">Language</h2>
+
+      <!-- ALL CHECKBOX WRAPPER DIV  -->
+      <div class="checkbox-headings">
+        a) First Language Test (English or French).
+      </div>
+      <div class="second-checkbox-wrapper" id="second-one-checkbox-wrapper">
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="second-checkbox-1"
+            id="checkbox-3-1"
+            onclick="handlelanguagesSelection(1)"
+          />
+          CLB 8 and higher</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="second-checkbox-1"
+            id="checkbox-3-2"
+            onclick="handlelanguagesSelection(2)"
+          />
+          CLB 7</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="second-checkbox-1"
+            id="checkbox-3-3"
+            onclick="handlelanguagesSelection(3)"
+          />
+          CLB 6</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="second-checkbox-1"
+            id="checkbox-3-4"
+            onclick="handlelanguagesSelection(4)"
+          />
+          CLB 5</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="second-checkbox-1"
+            id="checkbox-3-5"
+            onclick="handlelanguagesSelection(5)"
+          />
+          CLB 4</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox" id="checkbox-3-6-label">
+          <input
+            type="radio"
+            class="second-checkbox-1"
+            id="checkbox-3-6"
+            onclick="handlelanguagesSelection(6)"
+          />
+          English or French speaker without language test results</label
+        >
+      </div>
+
+      <div class="checkbox-headings">
+        b) Second Language Test (English or French)
+      </div>
+      <div class="second-checkbox-wrapper" id="second-two-checkbox-wrapper">
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="second-checkbox-2"
+            id="checkbox-3-7"
+            onclick="handlelanguagesSelection(7)"
+          />
+          CLB 8 and higher</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="second-checkbox-2"
+            id="checkbox-3-8"
+            onclick="handlelanguagesSelection(8)"
+          />
+          CLB 7</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="second-checkbox-2"
+            id="checkbox-3-9"
+            onclick="handlelanguagesSelection(9)"
+          />
+          CLB 6</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="second-checkbox-2"
+            id="checkbox-3-10"
+            onclick="handlelanguagesSelection(10)"
+          />
+          CLB 5</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="second-checkbox-2"
+            id="checkbox-3-11"
+            onclick="handlelanguagesSelection(11)"
+          />
+          CLB 4</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox" id="checkbox-3-12-label">
+          <input
+            type="radio"
+            class="second-checkbox-2"
+            id="checkbox-3-12"
+            onclick="handlelanguagesSelection(12)"
+          />
+          Not Applicable</label
+        >
+      </div>
+
+      <!-- POINT CALCULATION SECTION WRAPPER -->
+      <div class="point-wrapper">
+        <!-- INPUT WITH LABEL  -->
+        <label class="point-count-heading"
+          >Points
+          <input
+            type="text"
+            name="point"
+            class="language-point-input"
+            id="languagePointsDisplayer"
+            readonly
+          />
+        </label>
+      </div>
+      <input
+        type="text"
+        name="point"
+        class="point-input-hide"
+        id="languagePointsDisplayer-2"
+      />
+      <input
+        type="text"
+        name="point"
+        class="point-input-hide"
+        id="languagePointsDisplayer-3"
+      />
+    </section>
+    <!-- 3RD SECTION LANGUAGE ENDS  -->
+
+    <!-- 4TH SECTION AGE START  -->
+    <section id="age" class="age">
+      <h2 class="sec-heading">Age (maximum 12 points)</h2>
+
+      <div class="dropdown-wrapper">
+        <select id="age-select" name="current-age" class="age-select">
+          <option value="0" class="options">Less than 18 Years</option>
+          <option value="8" class="options">18 - 21 Years</option>
+          <option value="12" class="options">22 - 34 Years</option>
+          <option value="10" class="options">35 - 45 Years</option>
+          <option value="8" class="options">46 - 50 Years</option>
+          <option value="0" class="options">More than 50 Years</option>
+        </select>
+      </div>
+      <!-- POINT CALCULATION SECTION WRAPPER -->
+      <div class="point-wrapper-spacial">
+        <!-- INPUT WITH LABEL  -->
+        <label class="point-count-heading"
+          >Points
+          <input
+            type="text"
+            name="point"
+            class="point-input"
+            id="AgeInput"
+            readonly
+          />
+        </label>
+      </div>
+    </section>
+    <!-- 4TH SECTION AGE ENDS  -->
+
+    <!-- 5TH SECTION CONNECTION TO SASKATCHEWAN LABOUR MARKET & ADAPTABILLITY START  -->
+    <section id="connection" class="connection">
+      <h2 class="sec-heading">
+        Connection to Saskatchewan labour market & adaptability (maximum of 30
+        points)
+      </h2>
+
+      <!-- ALL CHECKBOX WRAPPER DIV  -->
+      <div class="checkbox-headings">
+        Do you have a skilled job offer from a Saskatchewan employer?
+      </div>
+      <div class="second-checkbox-wrapper" id="second-one-checkbox-wrapper">
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="connection-radio-1"
+            id="checkbox-5-1"
+            onclick="connectionHandler(1)"
+          />
+          Yes</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="connection-radio-1"
+            id="checkbox-5-2"
+            onclick="connectionHandler(2)"
+          />
+          No</label
+        >
+      </div>
+
+      <!-- ALL CHECKBOX WRAPPER DIV  -->
+      <div class="checkbox-headings">
+        Do you have close family relative (Parents, Sibling, Grandparents, Aunt,
+        UnclNephew, Cousin and Stepfamily members) in Saskatchewan?
+      </div>
+      <div class="second-checkbox-wrapper" id="second-one-checkbox-wrapper">
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="connection-radio-2"
+            id="checkbox-5-3"
+            onclick="connectionHandler(3)"
+          />
+          Yes</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="connection-radio-2"
+            id="checkbox-5-4"
+            onclick="connectionHandler(4)"
+          />
+          No</label
+        >
+      </div>
+
+      <!-- ALL CHECKBOX WRAPPER DIV  -->
+      <div class="checkbox-headings">
+        Do you have at least 12 months experience in Saskatchewan in years?
+      </div>
+      <div class="second-checkbox-wrapper" id="second-one-checkbox-wrapper">
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="connection-radio-3"
+            id="checkbox-5-5"
+            onclick="connectionHandler(5)"
+          />
+          Yes</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="connection-radio-3"
+            id="checkbox-5-6"
+            onclick="connectionHandler(6)"
+          />
+          No</label
+        >
+      </div>
+
+      <div class="checkbox-headings">
+        Do you have at least one year full-time academic student experience at a
+        recognizedSaskatchewan post-secondary education institution on a valid
+        study permit?
+      </div>
+      <div class="second-checkbox-wrapper" id="second-one-checkbox-wrapper">
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="connection-radio-4"
+            id="checkbox-5-7"
+            onclick="connectionHandler(7)"
+          />
+          Yes</label
+        >
+
+        <!-- CHECK BOX LABEL WITH ACCTUAL CHECKBOX  -->
+        <label class="work-xp-checkbox">
+          <input
+            type="radio"
+            class="connection-radio-4"
+            id="checkbox-5-8"
+            onclick="connectionHandler(8)"
+          />
+          No</label
+        >
+      </div>
+
+      <!-- POINT CALCULATION SECTION WRAPPER -->
+      <div class="point-wrapper-spacial">
+        <!-- INPUT WITH LABEL  -->
+        <label class="point-count-heading"
+          >Points
+          <input
+            type="text"
+            name="point-input"
+            class="point-input"
+            id="connectionDisplaying"
+            readonly
+          />
+        </label>
+      </div>
+      <input type="text" name="point" id="connectionDisplaying_2" />
+      <input type="text" name="point" id="connectionDisplaying_3" />
+      <input type="text" name="point" id="connectionDisplaying_4" />
+      <input type="text" name="point" id="connectionDisplaying_5" />
+    </section>
+    <!-- 5TH SECTION CONNECTION TO SASKATCHEWAN LABOUR MARKET & ADAPTABILLITY ENDS  -->
+
+    <!-- 6TH SECTION TOTAL CALCULATION STARTS  -->
+    <section id="sinp" class="sinp">
+      <h2 class="sec-heading">
+        Total points under Saskatchewan immigrant nominee program (SINP)
+      </h2>
+
+      <!-- POINT CALCULATION SECTION WRAPPER -->
+      <div class="point-wrapper-spacial">
+        <!-- INPUT WITH LABEL  -->
+
+        <input
+          type="text"
+          name="point"
+          class="point-input"
+          id="pointsInputTotal"
+          readonly
+        />
+        <button
+          class="grandTotalCalculationButton"
+          onclick="calculateGrandTotal()"
+        >
+          Calculate Total
+        </button>
+        <div id="Inp"></div>
+        <input
+          type="text"
+          name="rough-container"
+          id="EducationTraningContainer"
+        />
+        <input
+          type="text"
+          name="rough-container"
+          id="WorkExperienceContainer"
+        />
+        <input type="text" name="rough-container" id="LanguageContainer" />
+        <input type="text" name="rough-container" id="AgeContainer" />
+        <input type="text" name="rough-container" id="adaptabilityContainer" />
+      </div>
+    </section>
+    <!-- 6TH SECTION TOTAL CALCULATION ENDS  -->
+
+    <!-- Javascript Linking -->
+    <script src="./script.js"></script>
+  </body>
+</html>

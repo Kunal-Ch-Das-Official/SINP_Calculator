@@ -1,0 +1,310 @@
+/* 
+Content: SINP Calculator for canx Immigration, 
+Author: Kunal Chandra Das,
+Date: 30/03/2024
+ */
+
+/* BODY STYLE  */
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  margin: 1rem 1.5rem;
+  font-family: "Roboto";
+}
+
+@media screen and (max-width: 360px) {
+  * {
+    margin-left: 1rem;
+  }
+}
+
+/* FIRST HEADING WRAPPER STYLE  */
+.component-heading-wrapper {
+  margin: auto 0;
+}
+
+/* FIRST HEADING STYLE  */
+.component-heading {
+  color: #3f3f3f;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 40px;
+}
+/* UNDERNEATH PARAGRAPH  */
+.paragraph {
+  font-weight: 400;
+  color: #757575;
+  font-size: 15px;
+}
+
+/* ============================ */
+
+/* FIRST CALCULATION SEC START  */
+.eaducation-training {
+  border: 1px solid #eeee;
+  margin-top: 5rem;
+  padding-top: 3rem;
+  background: #fafafa;
+}
+/* TITLE TEXT STYLE  */
+.sec-heading {
+  margin: auto 4.5rem;
+  color: #3f3f3f;
+  font-weight: 500;
+  font-size: 18px;
+}
+/* RADIO BUTTON LABLE STYLE  */
+.checkbox-title {
+  display: flex;
+  align-items: center;
+  padding: auto 0;
+  font-weight: 400;
+  color: #757575;
+  font-size: 16px;
+}
+/* CHECK BOX STYLE  */
+.checkbox-round {
+  cursor: pointer;
+}
+/* TOTAL POINT SECTION STYLE  */
+.point-wrapper {
+  margin: 20px 3rem;
+  padding-top: 25px;
+}
+.point-wrapper-hide {
+  margin: 0px 3rem;
+  padding-top: 25px;
+}
+/* POINT HEADING STYLE  */
+.point-count-heading {
+  font-size: 15px;
+  font-weight: 500;
+  color: #757575;
+}
+/* POINT INPUT STYLE  */
+.point-input {
+  display: flex;
+  flex-direction: column;
+  padding: 11px 10px;
+  width: 72px;
+  font-size: 17px;
+  color: #898a9c;
+  background-color: #fff;
+  border: 1px solid #eeeeee;
+}
+
+/* ================================= */
+
+/* SECOND SECTION STYLE START  */
+
+.work-experence {
+  border: 1px solid #eeee;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  background: #fafafa;
+}
+.checkbox-headings {
+  color: #757575;
+  font-weight: 500;
+  margin: auto 4.5rem;
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 28px;
+}
+.second-checkbox-wrapper {
+  margin: auto 3rem;
+}
+.work-xp-checkbox {
+  font-size: 15px;
+  color: #757575;
+}
+.bellow-5-years {
+  cursor: pointer;
+  margin-right: 1px;
+}
+.above-5-years {
+  cursor: pointer;
+  margin-right: 1px;
+}
+@media screen and (max-width: 1020px) {
+  .work-xp-checkbox {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
+  .bellow-5-years {
+    margin-right: 10px;
+  }
+  .above-5-years {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  * {
+    margin: 1rem 0.5rem;
+  }
+  .work-xp-checkbox {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
+  .second-checkbox {
+    margin-right: 10px;
+  }
+}
+
+/* THIRD SECTION STYLE STARTS  */
+.language {
+  border: 1px solid #eeee;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  background: #fafafa;
+}
+#checkbox-3-6-label {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #757575;
+}
+#checkbox-3-12-label {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  color: #757575;
+}
+#checkbox-3-6 {
+  margin-right: 10px;
+}
+#checkbox-3-12 {
+  margin-right: 10px;
+}
+.language-point-input {
+  display: flex;
+  flex-direction: column;
+  padding: 11px 10px;
+  width: 72px;
+  font-size: 17px;
+  color: #898a9c;
+  background-color: #fff;
+  border: 1px solid #eeeeee;
+}
+@media screen and (max-width: 1020px) {
+  #checkbox-3-6-label {
+    padding: 0 10px;
+  }
+  #checkbox-3-12-label {
+    padding: 0 10px;
+  }
+}
+
+/* FOURTH SECTION STYLE STARTS  */
+.age {
+  border: 1px solid #eeee;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 0;
+  background: #fafafa;
+}
+.dropdown-wrapper {
+  margin: 1rem 2.8rem;
+}
+.age-select {
+  padding: 0.7rem 2rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  font-size: 17px;
+  color: #757575;
+  border: 1px solid #e2e2e2;
+  text-align: left;
+}
+.point-wrapper-spacial {
+  margin: 20px 3rem;
+  display: inline-flex;
+}
+#AgeInput {
+  margin: 15px 0;
+}
+@media screen and (max-width: 454px) {
+  .dropdown-wrapper {
+    margin: 1rem 2.8rem;
+  }
+}
+@media screen and (max-width: 360px) {
+  .dropdown-wrapper {
+    margin: 1rem 1.8rem;
+  }
+}
+
+/* FIFTH SECTION STYLE STARTS  */
+.connection {
+  border: 1px solid #eeee;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  background: #fafafa;
+}
+#connectionDisplaying {
+  margin: 15px 0;
+}
+
+.sinp {
+  border: 1px solid #eeee;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  background: #fafafa;
+}
+.grandTotalCalculationButton {
+  font-size: 17px;
+  padding: 10px 30px;
+  font-weight: 700;
+  color: #757575;
+  background: #fff;
+  border: 1px solid #cac8c8;
+}
+
+.grandTotalCalculationButton:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* ALL INPUT AND UNUSED THINGS  */
+#workExperiencePointsOutput2 {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+#workExperiencePointsOutput3 {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+.point-input-hide {
+  display: none;
+}
+#connectionDisplaying_2 {
+  display: none;
+}
+#connectionDisplaying_3 {
+  display: none;
+}
+#connectionDisplaying_4 {
+  display: none;
+}
+#connectionDisplaying_5 {
+  display: none;
+}
+#EducationTraningContainer {
+  display: none;
+}
+#WorkExperienceContainer {
+  display: none;
+}
+#LanguageContainer {
+  display: none;
+}
+#AgeContainer {
+  display: none;
+}
+#adaptabilityContainer {
+  display: none;
+}
